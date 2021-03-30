@@ -119,6 +119,7 @@ export class ValidationEnhancer {
       const effectiveReleaseTag: ReleaseTag = apiItemMetadata.effectiveReleaseTag;
 
       switch (astDeclaration.declaration.kind) {
+        case ts.SyntaxKind.ArrowFunction:
         case ts.SyntaxKind.FunctionDeclaration:
         case ts.SyntaxKind.MethodDeclaration:
           break;

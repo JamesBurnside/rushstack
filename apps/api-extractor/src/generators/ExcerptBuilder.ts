@@ -253,6 +253,7 @@ export class ExcerptBuilder {
 
   private static _isDeclaration(node: ts.Node): node is ts.NamedDeclaration {
     switch (node.kind) {
+      case ts.SyntaxKind.ArrowFunction:
       case ts.SyntaxKind.FunctionDeclaration:
       case ts.SyntaxKind.FunctionExpression:
       case ts.SyntaxKind.VariableDeclaration:

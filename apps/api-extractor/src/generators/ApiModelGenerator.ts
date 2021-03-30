@@ -133,6 +133,7 @@ export class ApiModelGenerator {
         this._processApiEnumMember(astDeclaration, exportedName, parentApiItem);
         break;
 
+      case ts.SyntaxKind.ArrowFunction:
       case ts.SyntaxKind.FunctionDeclaration:
         this._processApiFunction(astDeclaration, exportedName, parentApiItem);
         break;

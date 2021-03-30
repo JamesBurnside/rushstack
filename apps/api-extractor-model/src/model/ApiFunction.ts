@@ -46,6 +46,12 @@ export interface IApiFunctionOptions
  * }
  * ```
  *
+ * or this example of arrow function notation:
+ *
+ * ```ts
+ * export getAverage = (x: number, y: number): number => ((x + y) / 2.0);
+ * ```
+ *
  * Functions are exported by an entry point module or by a namespace.  Compare with {@link ApiMethod}, which
  * represents a function that is a member of a class.
  *

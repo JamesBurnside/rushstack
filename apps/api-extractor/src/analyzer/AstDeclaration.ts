@@ -254,6 +254,7 @@ export class AstDeclaration {
       case ts.SyntaxKind.Constructor: // Example: "constructor(x: number)"
       case ts.SyntaxKind.EnumDeclaration:
       case ts.SyntaxKind.EnumMember:
+      case ts.SyntaxKind.ArrowFunction: // Example: "(x: number) => number"
       case ts.SyntaxKind.FunctionDeclaration: // Example: "(x: number): number"
       case ts.SyntaxKind.GetAccessor:
       case ts.SyntaxKind.SetAccessor:
