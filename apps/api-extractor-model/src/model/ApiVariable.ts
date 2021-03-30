@@ -56,6 +56,7 @@ export class ApiVariable extends ApiNameMixin(ApiReleaseTagMixin(ApiDeclaredItem
   public readonly variableTypeExcerpt: Excerpt;
 
   public constructor(options: IApiVariableOptions) {
+    console.log('creating api variable');
     super(options);
 
     this.variableTypeExcerpt = this.buildExcerpt(options.variableTypeTokenRange);

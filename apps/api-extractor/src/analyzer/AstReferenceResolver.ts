@@ -189,6 +189,8 @@ export class AstReferenceResolver {
   ): AstDeclaration | ResolverFailure {
     const selectorName: string = memberSelector.selector;
 
+    console.log(`_selectUsingSystemSelector: ${selectorName}`);
+
     let selectorSyntaxKind: ts.SyntaxKind;
 
     switch (selectorName) {

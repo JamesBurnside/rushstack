@@ -307,6 +307,7 @@ export class AstSymbolTable {
    * Used by analyze to recursively analyze the entire child tree.
    */
   private _analyzeChildTree(node: ts.Node, governingAstDeclaration: AstDeclaration): void {
+    console.log(`_analyzeChildTree: ${node.pos}`);
     switch (node.kind) {
       case ts.SyntaxKind.JSDocComment: // Skip JSDoc comments - TS considers @param tags TypeReference nodes
         return;
@@ -636,6 +637,7 @@ export class AstSymbolTable {
    * Returns the first parent satisfying isAstDeclaration(), or undefined if none is found.
    */
   private _tryFindFirstAstDeclarationParent(node: ts.Node): ts.Node | undefined {
+    console.log(`_tryFindFirstAstDeclarationParent ${node}`);
     let currentNode: ts.Node | undefined = node.parent;
     while (currentNode) {
       if (AstDeclaration.isSupportedSyntaxKind(currentNode.kind)) {

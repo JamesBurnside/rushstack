@@ -246,6 +246,7 @@ export class AstDeclaration {
    * These correspond to the definitions that we can add AEDoc to.
    */
   public static isSupportedSyntaxKind(kind: ts.SyntaxKind): boolean {
+    console.log(`isSupportedSyntaxKind ${kind}`);
     // (alphabetical order)
     switch (kind) {
       case ts.SyntaxKind.CallSignature:
